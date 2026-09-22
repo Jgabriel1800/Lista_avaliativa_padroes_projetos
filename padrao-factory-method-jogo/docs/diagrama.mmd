@@ -1,0 +1,45 @@
+classDiagram
+    direction TB
+    class Localizacao {
+        <<abstract>>
+        -String nome
+        +receberJogador(Jogador jogador)
+        #criarInimigo()* Inimigo
+    }
+    class Amazonia {
+        #criarInimigo() Inimigo
+    }
+    class Sertao {
+        #criarInimigo() Inimigo
+    }
+    class RioDeJaneiro {
+        #criarInimigo() Inimigo
+    }
+    class Inimigo {
+        <<interface>>
+        +atacar(Jogador jogador)
+    }
+    class AnimalMutante {
+        +atacar(Jogador jogador)
+    }
+    class Cangaceiro {
+        +atacar(Jogador jogador)
+    }
+    class Criminoso {
+        +atacar(Jogador jogador)
+    }
+    class Jogador {
+        -String nome
+        +getNome() String
+    }
+    Localizacao <|-- Amazonia
+    Localizacao <|-- Sertao
+    Localizacao <|-- RioDeJaneiro
+    Inimigo <|.. AnimalMutante
+    Inimigo <|.. Cangaceiro
+    Inimigo <|.. Criminoso
+    Localizacao ..> Inimigo : usa
+    Amazonia ..> AnimalMutante : cria
+    Sertao ..> Cangaceiro : cria
+    RioDeJaneiro ..> Criminoso : cria
+    Inimigo ..> Jogador : ataca
