@@ -1,12 +1,29 @@
 # Uso de IA nesta questão
 
-## Ferramenta
-Claude (Anthropic), no modo Cowork.
-
 ## Prompt utilizado
-> Faça o passo a passo dessa atividade avaliativa cumprindo cada requisito pedido nela
 
-Anexo enviado junto com o prompt: `Lista Avaliativa I.pdf` (enunciado).
+Ferramenta: Claude (Anthropic). Anexo: `Lista Avaliativa I.pdf` (enunciado).
+
+> Contexto: jogo de ação em Java, ambientado em localizações brasileiras. Cada localização tem inimigos
+> próprios: Amazônia com animais mutantes e Sertão com cangaceiros; no futuro, Rio de Janeiro com
+> criminosos. Independentemente da localização, os inimigos sempre atacam o jogador que passa pela região,
+> e para o jogador só importa que haverá inimigos para enfrentar.
+>
+> Objetivo: modelar e implementar essa situação com o padrão Factory Method, produzindo diagrama de
+> classes, código e simulação, com os artefatos tão simples quanto possível. O código do jogo que usa os
+> inimigos não pode instanciar classes concretas de inimigo, e acrescentar uma nova localização não pode
+> exigir alteração nas classes já existentes.
+>
+> Não me dê a solução pronta. Me dê um passo a passo (tutorial) incremental para eu implementar, seguindo
+> estas condições:
+> 1. comece pela identificação dos papéis do padrão (produto, produtos concretos, criador, criadores
+>    concretos) e pelo diagrama de classes, antes de qualquer código;
+> 2. cada etapa deve deixar o projeto compilando, para virar um commit isolado, indicando quais arquivos
+>    são criados ou alterados;
+> 3. explique onde fica o factory method, por que ele é abstrato e por que o código comum da superclasse
+>    não precisa saber qual inimigo foi criado;
+> 4. termine com uma etapa que acrescente a localização futura (Rio de Janeiro) e mostre quais classes
+>    existentes precisaram ou não ser modificadas.
 
 ## Passo a passo (tutorial) sugerido pela IA para esta questão
 
