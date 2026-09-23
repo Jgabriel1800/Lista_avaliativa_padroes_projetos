@@ -1,12 +1,27 @@
 # Uso de IA nesta questão
 
-## Ferramenta
-Claude (Anthropic), no modo Cowork.
-
 ## Prompt utilizado
-> Faça o passo a passo dessa atividade avaliativa cumprindo cada requisito pedido nela
 
-Anexos enviados junto com o prompt: `Lista Avaliativa I.pdf` (enunciado) e `src.zip` (código inicial).
+Ferramenta: Claude (Anthropic). Anexos: `Lista Avaliativa I.pdf` (enunciado) e `src.zip` (código inicial).
+
+> Contexto: projeto Java com o pacote `websearch` em anexo (`WebSearchModel`, `Snooper`, `Main` e o arquivo
+> `Hamlet.txt`). Hoje o `WebSearchModel` lê o arquivo linha a linha e notifica todos os observadores
+> registrados, e o `Snooper` imprime todas as consultas.
+>
+> Objetivo: refatorar para o padrão Strategy, de forma que cada observador seja registrado junto com um
+> objeto que define a política de filtragem das consultas, e que o modelo só notifique o observador quando
+> essa política aceitar a consulta. Restrição de acoplamento: o modelo de busca não pode conhecer nenhuma
+> implementação concreta de filtro, apenas a interface.
+>
+> Não me dê a solução pronta. Me dê um passo a passo (tutorial) incremental para eu implementar, seguindo
+> estas condições:
+> 1. cada etapa deve deixar o projeto compilando, para virar um commit isolado;
+> 2. em cada etapa, diga quais arquivos mudam e qual é o papel de cada classe no padrão (contexto,
+>    estratégia, estratégia concreta, cliente);
+> 3. indique em que ponto do fluxo a estratégia deve ser consultada e por quê;
+> 4. termine com uma etapa de verificação, comparando a saída do programa com o exemplo do enunciado
+>    ("Oh Yes! ..." para consultas com 'friend', sem diferenciar maiúsculas, e "So long ..." para consultas
+>    com mais de 60 caracteres).
 
 ## Passo a passo (tutorial) sugerido pela IA para esta questão
 
