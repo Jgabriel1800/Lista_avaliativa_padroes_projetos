@@ -1,12 +1,25 @@
 # Uso de IA nesta questão
 
-## Ferramenta
-Claude (Anthropic), no modo Cowork.
-
 ## Prompt utilizado
-> Faça o passo a passo dessa atividade avaliativa cumprindo cada requisito pedido nela
 
-Anexos enviados junto com o prompt: `Lista Avaliativa I.pdf` (enunciado) e `src.zip` (código inicial).
+Ferramenta: Claude (Anthropic). Anexos: `Lista Avaliativa I.pdf` (enunciado) e `src.zip` (código inicial).
+
+> Contexto: projeto Java com o pacote `telephone` em anexo (`PhoneModel`, `KeyPad`, `Screen`, `Main`).
+> O `KeyPad` envia dígitos para o `PhoneModel`, que apenas os armazena; a `Screen` está vazia.
+>
+> Objetivo: aplicar o padrão Observer para que a interface com o usuário seja avisada a cada novo dígito
+> inserido, com dois observadores criados pela `Screen`: um que imprime o dígito mais recente e outro que,
+> ao completar o número, imprime "Agora discando 081999887766...". Restrições do enunciado: somente a UI
+> pode imprimir na tela, e o modelo do telefone não pode ter nenhuma dependência da UI.
+>
+> Não me dê a solução pronta. Me dê um passo a passo (tutorial) incremental para eu implementar, seguindo
+> estas condições:
+> 1. cada etapa deve deixar o projeto compilando, para virar um commit isolado;
+> 2. em cada etapa, diga quais arquivos mudam e qual é o papel de cada classe no padrão (sujeito,
+>    interface de observador, observadores concretos);
+> 3. explique onde a notificação deve ser disparada e como as duas restrições acima ficam garantidas
+>    olhando só para o código do modelo;
+> 4. aponte, na etapa de verificação, o que comparar entre a saída obtida e o exemplo do enunciado.
 
 ## Passo a passo (tutorial) sugerido pela IA para esta questão
 
